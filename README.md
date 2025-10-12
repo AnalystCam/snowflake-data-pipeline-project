@@ -71,7 +71,7 @@ These insights empower stakeholders with key **business metrics**, driving **dat
 
 ### **🔸 Silver Layer — Curated & Clean Data**
 
-* Cleanses and standardizes raw data.
+* Cleanses and standardises raw data.
 * Handles data type casting, deduplication, and consistency checks.
 * Outputs data suitable for integration and analysis.
 
@@ -84,7 +84,7 @@ These insights empower stakeholders with key **business metrics**, driving **dat
 📊 **Data Flow:**
 CSV Files → Snowflake (Bronze → Silver → Gold) → Power BI
 
-![Data Architecture Flow](A_flowchart_in_the_digital_medium_illustrates_a_da.png)
+![Data Architecture Flow](docs/Data Layout.drawio.png)
 
 ---
 
@@ -93,7 +93,7 @@ CSV Files → Snowflake (Bronze → Silver → Gold) → Power BI
 | Tool / Platform                | Purpose                                                         |
 | ------------------------------ | --------------------------------------------------------------- |
 | **Snowflake**                  | Cloud data warehouse for storage, transformation, and analytics |
-| **SQL**                        | Data transformation and modeling across Medallion layers        |
+| **SQL**                        | Data transformation and modelling across Medallion layers        |
 | **Power BI**                   | Business Intelligence and data visualization                    |
 | **CSV Files**                  | Source data from ERP and CRM systems                            |
 
