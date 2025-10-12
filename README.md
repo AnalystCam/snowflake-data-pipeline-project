@@ -63,19 +63,19 @@ These insights empower stakeholders with key **business metrics**, driving **dat
 
 ## 🧩 Data Architecture
 
-### **🔹 Bronze Layer — Raw & Ingested Data**
+### **Bronze Layer — Raw & Ingested Data**
 
 * Stores unprocessed data as received from CSV sources (ERP & CRM).
 * Loaded using Snowflake’s `COPY INTO` or Snowpipe.
 * Serves as the immutable foundation for transformations.
 
-### **🔸 Silver Layer — Curated & Clean Data**
+### **Silver Layer — Curated & Clean Data**
 
 * Cleanses and standardises raw data.
 * Handles data type casting, deduplication, and consistency checks.
 * Outputs data suitable for integration and analysis.
 
-### **🔶 Gold Layer — Analytics & Business Data**
+### **Gold Layer — Analytics & Business Data**
 
 * Combines Silver data into analytical views.
 * Delivers KPIs and aggregated insights for business reporting.
@@ -84,7 +84,7 @@ These insights empower stakeholders with key **business metrics**, driving **dat
 📊 **Data Flow:**
 CSV Files → Snowflake (Bronze → Silver → Gold) → Power BI
 
-![Data Architecture Flow](docs/Data Layout.drawio.png)
+![Data Architecture Flow](docs/Data_Layout.drawio.png)
 
 ---
 
