@@ -1,0 +1,20 @@
+-- ###############################################################
+-- SCRIPT NAME: TASK_REFRESH_BRONZE.sql
+-- DESCRIPTION:
+--   AUTOMATED TASK TO RUN THE BRONZE REFRESH PROCEDURE DAILY AT MIDNIGHT (UTC)
+-- ###############################################################
+
+-- Ensure that your Snowflake ACCOUNTADMIN or equivalent role
+-- has task scheduling privileges.
+
+CREATE OR REPLACE TASK DATA_DB.BRONZE.TASK_REFRESH_BRONZE_DATA
+  WAREHOUSE = COMPUTE_WH
+  SCHEDULE = 'USING CRON 0 0 * * * UTC'  -- Runs every day at 00:00 UTC
+AS
+  CALL DATA_DB.BRONZE.SP_REFRESH_BRONZE_DATA();
+
+-- ENABLE THE TASK
+ALTER TASK DATA_DB.BRONZE.TASK_REFRESH_BRONZE_DATA RESUME;
+
+-- VERIFY TASK
+SHOW TASKS LIKE 'TASK_REFRESH_BRONZE_DATA' IN SCHEMA DATA_DB.BRONZE;
